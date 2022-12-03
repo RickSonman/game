@@ -153,7 +153,6 @@ Monster::MonsterData Monster::monsterData[(unsigned int)Monster::Type::MAX_TYPES
 Monster::Type Monster::getRandomMonster()
 {
     static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0);
-    // Равномерно распределяем генерацию значения из диапазона
     return static_cast<Monster::Type>(rand() * fraction * (((int)Monster::Type::MAX_TYPES - 1) - 0 + 1) + 0);
 }
 
